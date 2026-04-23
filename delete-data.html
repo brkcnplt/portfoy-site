@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veri Silme Talebi - Kasam</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        :root {
+            --bg: #0A0A0A;
+            --card: #1A1A1A;
+            --border: #333333;
+            --text: #FFFFFF;
+            --text-secondary: #B3B3B3;
+            --accent: #6366F1;
+            --danger: #EF4444;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 80px; }
+        h1 { font-size: 32px; margin-bottom: 8px; letter-spacing: -0.01em; }
+        .updated { color: var(--text-secondary); font-size: 14px; margin-bottom: 32px; }
+        h2 { font-size: 20px; margin-top: 36px; margin-bottom: 12px; color: var(--accent); }
+        h3 { font-size: 16px; margin-top: 20px; margin-bottom: 8px; }
+        p, li { color: var(--text-secondary); font-size: 15px; margin-bottom: 12px; }
+        ul, ol { padding-left: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        strong { color: var(--text); font-weight: 600; }
+        .step {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px; height: 32px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 8px 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+        .back-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .warn {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--danger);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin: 16px 0;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        th, td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        th { background: var(--card); color: var(--text); font-weight: 600; }
+        tr:last-child td { border-bottom: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Veri Silme Talebi</h1>
+        <p class="updated">Kasam — Portföy Performans Takip · Son güncelleme: 23 Nisan 2026</p>
+
+        <h2>Genel Bakış</h2>
+        <p>
+            <strong>Kasam</strong> (Google Play mağaza kimliği: <em>com.portfolio.portfoy_takip</em>),
+            kullanıcı verilerini mümkün olan en az düzeyde toplayan bir mobil uygulamadır.
+            Portföy verileriniz <strong>yalnızca cihazınızda</strong> saklanır ve sunucularımıza gönderilmez.
+            Bu sayfa, Kasam ile ilgili veri silme talebinizi nasıl gerçekleştireceğinizi adım adım açıklar.
+        </p>
+
+        <h2>1. Cihazınızdaki Verileri Silmek (Anlık)</h2>
+
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Uygulama İçinden</h3>
+            <ol>
+                <li>Kasam uygulamasını açın</li>
+                <li>Sağ üstteki <strong>Ayarlar</strong> ikonuna dokunun</li>
+                <li>Aşağıda <strong>"Tehlikeli Bölge"</strong> bölümünü bulun</li>
+                <li><strong>"Tüm Verileri Sil"</strong> butonuna dokunun</li>
+                <li>Onay penceresinde <strong>Onayla</strong>'ya basın</li>
+            </ol>
+            <p style="color: var(--text);">✅ Portföyünüz, işlem geçmişiniz ve realized P/L kayıtlarınız <strong>anlık ve kalıcı</strong> olarak silinir.</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Uygulamayı Kaldırarak</h3>
+            <p>Android Ayarlar → Uygulamalar → <strong>Kasam</strong> → Kaldır.</p>
+            <p>Bu işlem tüm yerel veriyi (portföy, önbellek, ayarlar) siler.</p>
+        </div>
+
+        <h2>2. Üçüncü Taraf Hizmetlerdeki Verileri Silmek</h2>
+
+        <p>Kasam aşağıdaki üçüncü taraf hizmetleri kullanır. Her birindeki verinizi silmek için ilgili adımları izleyin:</p>
+
+        <div class="step">
+            <h3>Google AdMob (Reklam Kimliği)</h3>
+            <p>Android cihazınızda reklam kişiselleştirmesini sıfırlamak/kapatmak için:</p>
+            <ol>
+                <li>Android <strong>Ayarlar → Google → Reklamlar</strong></li>
+                <li><strong>"Reklam kimliğini sıfırla"</strong> veya <strong>"Reklam kimliğini sil"</strong></li>
+            </ol>
+            <p>Detay: <a href="https://support.google.com/googleplay/android-developer/answer/6048248" target="_blank" rel="noopener">Google AdMob Veri Silme Yardımı</a></p>
+        </div>
+
+        <div class="step">
+            <h3>Firebase Crashlytics (Anonim Çökme Raporları)</h3>
+            <p>Crashlytics yalnızca anonim teknik veri toplar (stack trace, cihaz modeli). Kişisel bilgi içermez.</p>
+            <p><strong>Otomatik saklama:</strong> 90 gün sonra otomatik silinir.</p>
+            <p><strong>Erken silme:</strong> <a href="mailto:bytelunalabs@gmail.com?subject=Crashlytics%20Veri%20Silme%20Talebi">bytelunalabs@gmail.com</a> adresine cihaz instance ID'nizi (opsiyonel) göndererek talep edebilirsiniz.</p>
+        </div>
+
+        <div class="step">
+            <h3>RevenueCat (Abonelik Bilgisi)</h3>
+            <p>Premium abonelik durumunuz RevenueCat tarafından saklanır.</p>
+            <ol>
+                <li>Aboneliğinizi iptal edin: Google Play → Profil → Ödemeler ve abonelikler</li>
+                <li>Veri silme talebi için: <a href="mailto:privacy@revenuecat.com">privacy@revenuecat.com</a></li>
+            </ol>
+        </div>
+
+        <h2>3. Silinen Veri Türleri ve Saklama Süresi</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Veri Türü</th>
+                        <th>Nerede Saklanır</th>
+                        <th>Silme Şekli</th>
+                        <th>Silme Süresi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Portföy (varlık, işlemler, notlar)</td>
+                        <td>Cihazınız</td>
+                        <td>App içi "Tüm Verileri Sil" veya uygulama kaldırma</td>
+                        <td>Anlık</td>
+                    </tr>
+                    <tr>
+                        <td>Realized Kar/Zarar geçmişi</td>
+                        <td>Cihazınız</td>
+                        <td>App içi "Tüm Verileri Sil"</td>
+                        <td>Anlık</td>
+                    </tr>
+                    <tr>
+                        <td>Fiyat önbelleği</td>
+                        <td>Cihazınız</td>
+                        <td>App içi "Tüm Verileri Sil"</td>
+                        <td>Anlık</td>
+                    </tr>
+                    <tr>
+                        <td>Uygulama Ayarları</td>
+                        <td>Cihazınız</td>
+                        <td>Uygulama kaldırma</td>
+                        <td>Anlık</td>
+                    </tr>
+                    <tr>
+                        <td>Reklam Kimliği (AAID)</td>
+                        <td>Google (Android)</td>
+                        <td>Android Ayarlar → Reklamlar</td>
+                        <td>Anlık (sıfırlama)</td>
+                    </tr>
+                    <tr>
+                        <td>Çökme raporları (anonim)</td>
+                        <td>Firebase Crashlytics</td>
+                        <td>Otomatik veya email talebi</td>
+                        <td>90 gün (otomatik)</td>
+                    </tr>
+                    <tr>
+                        <td>Abonelik kimliği</td>
+                        <td>Google Play + RevenueCat</td>
+                        <td>Abonelik iptal + talep</td>
+                        <td>Politikaya tabi</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>4. Veri Silme Talebini Kimden Gönderirim?</h2>
+
+        <p>Yukarıdaki yöntemleri denediniz ve hala destek istiyorsanız:</p>
+
+        <div class="step">
+            <h3>✉️ E-posta</h3>
+            <p>
+                <a href="mailto:bytelunalabs@gmail.com?subject=KVKK%20Veri%20Silme%20Talebi">bytelunalabs@gmail.com</a>
+            </p>
+            <p>Konu: <strong>"KVKK Veri Silme Talebi"</strong></p>
+            <p>İletişim sağlandığında 30 gün içinde cevap veriyoruz.</p>
+        </div>
+
+        <div class="warn">
+            <strong>⚠️ Önemli:</strong> Kasam zaten verilerinizi <strong>kendi sunucularında saklamaz</strong>.
+            Cihaz içi "Tüm Verileri Sil" işlemi çoğu kullanıcı için yeterlidir; bu sayfadaki ek adımlar
+            yalnızca üçüncü taraf hizmetlerdeki kalıntı veri içindir.
+        </div>
+
+        <h2>5. KVKK ve GDPR Hakları</h2>
+        <p>
+            Türkiye'de <strong>KVKK</strong> (Kişisel Verileri Koruma Kanunu), Avrupa'da <strong>GDPR</strong>
+            kapsamında veri silme, erişim ve taşınabilirlik haklarınız saklıdır. Kasam bu haklara tam uyumludur.
+            Detay için:
+            <a href="privacy.html">Gizlilik Politikası</a>.
+        </p>
+
+        <p>
+            Veri sorumlusu: <strong>Byteluna Labs</strong> (Kasam geliştirici hesabı).
+        </p>
+
+        <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+    </div>
+</body>
+</html>
