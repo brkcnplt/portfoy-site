@@ -48,15 +48,15 @@
 <body>
     <div class="container">
         <h1>Gizlilik Politikası</h1>
-        <p class="updated">Son güncelleme: 19 Nisan 2026</p>
+        <p class="updated">Son güncelleme: 23 Nisan 2026</p>
 
         <h2>Genel Bakış</h2>
-        <p>Kasam ("Portföy Performans Takip"), kullanıcı gizliliğine saygı duyan bir mobil uygulamadır. Bu politika; uygulama (<strong>com.portfolio.portfoy_takip</strong>) ve ilgili web sitesi (<strong>portfoyperformans-kasam.github.io</strong>) tarafından hangi verilerin nasıl işlendiğini açıklar.</p>
+        <p>Kasam ("Portföy Performans Takip"), kullanıcı gizliliğine saygı duyan bir mobil uygulamadır. Bu politika; Kasam uygulamasının ve ilgili web sitesinin (<strong>portfoyperformans-kasam.github.io</strong>) kullanıcı verilerini nasıl işlediğini açıklar. Google Play mağaza kimliği: <em>com.portfolio.portfoy_takip</em>.</p>
 
         <h2>1. Topladığımız Veriler</h2>
 
         <h3>1.1 Uygulamaya Girdiğiniz Portföy Verileri</h3>
-        <p>Eklediğiniz varlıklar, işlemler, fiyatlar ve notlar <strong>yalnızca cihazınızın yerel depolama alanında</strong> (SharedPreferences/Hive) saklanır. Sunucularımıza gönderilmez, başka kullanıcılarla paylaşılmaz.</p>
+        <p>Eklediğiniz varlıklar, işlemler, fiyatlar ve notlar <strong>yalnızca cihazınızın yerel depolama alanında</strong> şifreli olarak saklanır. Sunucularımıza gönderilmez, başka kullanıcılarla paylaşılmaz. Bulut yedekleme <strong>yoktur</strong> — telefonu kaybederseniz verilerinizi geri almak için önceden "Portföyü Excel olarak indir" seçeneğini kullanmanız gerekir.</p>
 
         <h3>1.2 Fiyat Sorguları</h3>
         <p>Hisse/kripto fiyatı, döviz kuru ve tarihî maliyet hesaplaması için aşağıdaki üçüncü taraf API'lere anonim istek gönderilir:</p>
@@ -75,10 +75,11 @@
         <ul>
             <li><strong>Google AdMob:</strong> Freemium kullanıcılar için banner, interstitial, rewarded ve native reklamlar gösterilir. AdMob reklam kişiselleştirme için cihaz reklam kimliği (AAID), IP, genel konum gibi veriler kullanabilir. Detay: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>.</li>
             <li><strong>RevenueCat:</strong> Premium abonelik yönetimi için RevenueCat kullanılır. Google Play satın alma kimliği ve abonelik durumunu işler. Detay: <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat Gizlilik Politikası</a>.</li>
+            <li><strong>Firebase Crashlytics:</strong> Uygulama çökmelerini tespit edip düzeltebilmek için anonim teşhis verisi (stack trace, cihaz modeli, Android sürümü, oturum kimliği) toplanır. Ad, email, konum, portföy içeriği gibi <strong>kişisel veri gönderilmez</strong>. Debug modunda (geliştirme) toplama kapalıdır. Detay: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Gizlilik Politikası</a>.</li>
         </ul>
 
         <h3>1.5 Analitik</h3>
-        <p>Uygulama içinde üçüncü taraf analitik (Google Analytics, Firebase Analytics, Mixpanel vb.) <strong>kullanılmaz</strong>. Davranışınızı izlemiyoruz.</p>
+        <p>Kasam, kullanıcı davranışını izleyen <strong>üçüncü taraf analitik</strong> (Google Analytics, Mixpanel, Amplitude, Hotjar vb.) <strong>kullanmaz</strong>. Ekran görüntülenmeleri, tıklamalar ya da oturum süreleri ölçülmez. Yukarıda belirtilen Firebase Crashlytics yalnızca hata raporlama amaçlı çalışır — davranışsal analiz değildir.</p>
 
         <h2>2. Verilerin Paylaşımı</h2>
         <p>Kişisel verilerinizi üçüncü taraflara <strong>satmıyoruz, kiralamıyoruz veya takas etmiyoruz</strong>. Tek istisna: yasal zorunluluk halinde resmi mercilere, yasal sınırlar içinde.</p>
@@ -115,11 +116,13 @@
         <p>Bu politika zaman zaman güncellenebilir. Önemli değişikliklerde uygulama güncellemesiyle birlikte kullanıcılar bilgilendirilir. Güncel versiyon her zaman bu sayfadadır.</p>
 
         <h2>10. İletişim</h2>
-        <p>Sorularınız veya talepleriniz için:</p>
+        <p>Sorularınız, veri silme talepleriniz veya KVKK kapsamındaki haklarınız için:</p>
         <ul>
+            <li><strong>E-posta:</strong> <a href="mailto:bytelunalabs@gmail.com">bytelunalabs@gmail.com</a></li>
             <li>X (Twitter): <a href="https://x.com/kasam_app" target="_blank" rel="noopener">@kasam_app</a></li>
             <li>Uygulama içinden: Ayarlar → İletişim</li>
         </ul>
+        <p>Veri sorumlusu: <strong>Byteluna Labs</strong> (Kasam geliştirici hesabı).</p>
 
         <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
     </div>
